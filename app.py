@@ -5,3 +5,5 @@ def get_btc_price():
     price = data["bitcoin"]["usd"]
     print(f"BTC Price: ${price}")
 get_btc_price()
+with open("btc_log.txt", "a") as f:
+    f.write(f"BTC Price: ${price} at {time.ctime()}\n")
